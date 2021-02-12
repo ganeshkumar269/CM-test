@@ -1,9 +1,3 @@
-
-
-
-// let adderBtn = document.querySelector("#adder-btn");
-// adderBtn.addEventListener('click',(e)=>addItem("RandomText"))
-
 document.addEventListener('DOMContentLoaded', event => {
 	const { ipcRenderer, clipboard } = require('electron')
 	
@@ -48,15 +42,6 @@ document.addEventListener('DOMContentLoaded', event => {
 						})
 
 
-	// ipcRenderer.on('m2r', (event, arg) => {
-	// 	// console.log("r.js: clipboard-event-listner-m2r" + arg)
-	// 	if(arg != prevClipboardTop){
-	// 		prevClipboardTop = arg
-	// 		addItem(arg)
-	// 		updateInDB()		
-	// 	}
-	// })
-	//listen for any changes in CB
 	setInterval(() => {
 		let text = clipboard.readText()
 		if(text != cbTop){
@@ -66,8 +51,6 @@ document.addEventListener('DOMContentLoaded', event => {
 			updateDB()		
 		}
 	},1000)
-	// setInterval(() => ipcRenderer.send("r2m","gibmetext"),1000)
-
 
 	//for testing purpose
 	addItem("Random Text")
