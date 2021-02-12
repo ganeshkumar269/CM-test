@@ -7,22 +7,22 @@ const store = new Store()
 
 
 // const firebaseApp = require('firebase/app')
-const express = require('express');
-const { env } = require('process');
-const eapp = express()
-eapp.use(express.static('public'));
-eapp.set('view engine','ejs');
-eapp.get('/',(req,res) => res.render('index.html'))
-eapp.listen(process.env.PORT || 9999, (err) => {
-  if(err) console.log(err)
-  else console.log("Server Listens at 9999")
-})
+// const express = require('express');
+// const { env } = require('process');
+// const eapp = express()
+// eapp.use(express.static('public'));
+// eapp.set('view engine','ejs');
+// eapp.get('/',(req,res) => res.render('index.html'))
+// eapp.listen(process.env.PORT || 9999, (err) => {
+//   if(err) console.log(err)
+//   else console.log("Server Listens at 9999")
+// })
 
 console.log("Hello from index.js")
 
-require('electron-reload')(__dirname, {
-  electron: path.join(__dirname, '../node_modules', '.bin', 'electron')
-});
+// require('electron-reload')(__dirname, {
+//   electron: path.join(__dirname, '../node_modules', '.bin', 'electron')
+// });
 
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
