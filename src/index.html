@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">    
+  </head>
+ <body>
+    <ul id="mainlist" style="list-style: none;" class="list-group"></ul>
+    <script src="./r.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBneKlUlgj9HvwCZ-5B8aw2KcowtacVB6U",
+        authDomain: "clipboard-api.firebaseapp.com",
+        databaseURL: "https://clipboard-api-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "clipboard-api",
+        storageBucket: "clipboard-api.appspot.com",
+        messagingSenderId: "17614232618",
+        appId: "1:17614232618:web:f77bcea8cdda0c68e2f753",
+        measurementId: "G-R3R98Y2X98"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js" defer></script>
+
+  </body>
+</html>
