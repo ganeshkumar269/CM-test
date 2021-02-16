@@ -1,0 +1,60 @@
+acnt created by me in the firebase
+key will be dist to a user
+he can use the key as an acnt
+
+firestore -> uid -> key
+            timestamp -> timestamp
+            value -> clipboard value
+
+electron store to store the userkey
+
+initially we search for key and see if its valid else we prompt to login i.e ask to enter the userkey
+
+then its all good
+
+Virtual CB:
+    Props:
+        top
+        history
+        id
+
+How does VCB interact with system CB:
+    app has 1 CB active in any point of time
+    we check if CBTop and VCBTop are same if not then do appropriate actions
+
+How does VCB interact with DB:
+    if VCB has update it pushes to DB with {VCBId,value}
+    if DB has any changes it updates corresponding VCB
+    i.e 2 listeners
+
+
+CheckCB:
+    Every Second clipboard refresh
+    check active VCBTop and text
+    if diff update VCB,DB and refresh screen
+
+changeIndex:
+    listens to button for change of active index
+
+Process:
+    acticeIndex
+    VCBList
+    CheckCB()
+    displayList()
+    changeIndex()
+    updateCB()
+    updateDB()
+
+    CB.getTop()
+    CB.update(text)
+    CB
+    DB
+
+Physical CB
+VCBList
+DB
+change in DB -> change PCB,VCB
+change in CB -> change CB,VCB
+
+Top -> list of tops of each VCB
+currTop = top of curr active VCB
