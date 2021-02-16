@@ -6,9 +6,10 @@ const store = new Store()
 
 console.log("Hello from index.js")
 
-require('electron-reload')(__dirname, {
-  electron: path.join(__dirname, '../node_modules', '.bin', 'electron')
-});
+
+// require('electron-reload')(__dirname, {
+//   electron: path.join(__dirname, '../node_modules', '.bin', 'electron')
+// });
 
 
 if (require('electron-squirrel-startup')) app.quit()
@@ -23,6 +24,7 @@ const createWindow = () => {
 			nodeIntegration:true,
 			nativeWindowOpen: true,
 		},
+		// frame:false,
 	});
 	// mainWindow.maximize();
 	if(store.get('userKey') == null){

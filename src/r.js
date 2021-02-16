@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', event => {
-	const { ipcRenderer, clipboard } = require('electron')
+	const { ipcRenderer, clipboard, Tray } = require('electron')
 	
 	let db = firebase.firestore();
 	let colRef = db.collection('clipboard-collection')
 	let userKey = ipcRenderer.sendSync("getKey","gibmekey")
 	let docId = ipcRenderer.sendSync("getDocId","gibmekey")
 	var mainlist = document.querySelector("#mainlist")
-	
+	var image = document.querySelector("img")
 	console.log("From r.js")
 
 	let cbTop = "" 
